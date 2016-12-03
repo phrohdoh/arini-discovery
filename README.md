@@ -8,5 +8,5 @@ MIT
 
 ## Other
 
-This will probably want to use these crates someday:
-* https://github.com/dylanmckay/mdns
+This library is _not currently functional_ but, hopefully with the help of
+the Parrot developers, it will reach a useable state soon!
