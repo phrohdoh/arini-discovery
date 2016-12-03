@@ -23,8 +23,8 @@ impl ServiceType {
             ServiceType::BebopDrone => "._arsdk-0901._udp",
             ServiceType::JumpingSumo => "._arsdk-0902._udp",
             ServiceType::SkyController => "._arsdk-0903._udp",
-            ServiceType::JumpingNight => "._arsdk-0904._udp",
-            ServiceType::JumpingRace => "._arsdk-0905._udp",
+            ServiceType::JumpingNight => "._arsdk-0905._udp",
+            ServiceType::JumpingRace => "._arsdk-0906._udp",
         }
     }
 }
@@ -71,8 +71,8 @@ mod tests {
         assert_eq!(format!("{:?}", ServiceType::SkyController),
                    "._arsdk-0903._udp");
         assert_eq!(format!("{:?}", ServiceType::JumpingNight),
-                   "._arsdk-0904._udp");
-        assert_eq!(format!("{:?}", ServiceType::JumpingRace),
                    "._arsdk-0905._udp");
+        assert_eq!(format!("{:?}", ServiceType::JumpingRace),
+                   "._arsdk-0906._udp");
     }
 }
