@@ -5,3 +5,8 @@
 ## LICENSE
 
 MIT
+
+## Other
+
+This will probably want to use these crates someday:
+* https://github.com/dylanmckay/mdns
