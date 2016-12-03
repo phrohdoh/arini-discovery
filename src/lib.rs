@@ -1,6 +1,6 @@
 use std::fmt;
 
-enum ServiceType {
+pub enum ServiceType {
     /// ._arsdk-0901._dup
     BebopDrone,
 
