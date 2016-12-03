@@ -1,13 +1,13 @@
 use std::fmt;
 
 enum ServiceType {
-    Bebop,
+    BebopDrone,
 }
 
 impl ServiceType {
     pub fn get_wifi_service_type(&self) -> &'static str {
         match *self {
-            ServiceType::Bebop => "._arsdk-0901._udp",
+            ServiceType::BebopDrone => "._arsdk-0901._udp",
         }
     }
 }
@@ -23,7 +23,7 @@ impl fmt::Display for ServiceType {
         write!(f,
                "{}",
                match *self {
-                   ServiceType::Bebop => "Bebop Drone",
+                   ServiceType::BebopDrone => "Bebop Drone",
                })
     }
 }
@@ -34,11 +34,11 @@ mod tests {
 
     #[test]
     fn service_type_display() {
-        assert_eq!(format!("{}", ServiceType::Bebop), "Bebop Drone");
+        assert_eq!(format!("{}", ServiceType::BebopDrone), "Bebop Drone");
     }
 
     #[test]
     fn service_type_debug() {
-        assert_eq!(format!("{:?}", ServiceType::Bebop), "._arsdk-0901._udp");
+        assert_eq!(format!("{:?}", ServiceType::BebopDrone), "._arsdk-0901._udp");
     }
 }
