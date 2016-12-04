@@ -8,22 +8,19 @@ use std::time::Duration;
 fn main() {
     let bebop = ServiceType::Bebop2;
     let discover_service_name = bebop.get_wifi_service_type();
-    println!("The {} can be discovered with Service Type {}",
-             bebop,
-             discover_service_name);
+    let search_duration = Some(Duration::from_secs(5));
 
-    let search_duration = Duration::from_secs(5);
-    mdns::discover(discover_service_name, Some(search_duration), |response| {
-            let addresses = response.records().filter_map(|record| {
-                if let mdns::RecordKind::A(addr) = record.kind {
-                    Some(addr)
+    mdns::discover(discover_service_name, search_duration, |response| {
+            let records = response.records().filter_map(|record| {
+                if let mdns::RecordKind::A(_) = record.kind {
+                    Some(record)
                 } else {
                     None
                 }
             });
 
-            for addr in addresses {
-                println!("Found {} on {}", bebop, addr);
+            for record in records {
+                println!("Found {:?} with addr {:?}", record.name, record.kind);
             }
         })
         .expect(&format!("Failed to discover {}", discover_service_name));

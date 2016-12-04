@@ -72,13 +72,9 @@ mod tests {
     fn service_type_debug() {
         assert_eq!(format!("{:?}", ServiceType::Bebop), "_arsdk-0901");
         assert_eq!(format!("{:?}", ServiceType::Bebop2), "_arsdk-090c");
-        assert_eq!(format!("{:?}", ServiceType::JumpingSumo),
-                   "_arsdk-0902");
-        assert_eq!(format!("{:?}", ServiceType::SkyController),
-                   "_arsdk-0903");
-        assert_eq!(format!("{:?}", ServiceType::JumpingNight),
-                   "_arsdk-0905");
-        assert_eq!(format!("{:?}", ServiceType::JumpingRace),
-                   "_arsdk-0906");
+        assert_eq!(format!("{:?}", ServiceType::JumpingSumo), "_arsdk-0902");
+        assert_eq!(format!("{:?}", ServiceType::SkyController), "_arsdk-0903");
+        assert_eq!(format!("{:?}", ServiceType::JumpingNight), "_arsdk-0905");
+        assert_eq!(format!("{:?}", ServiceType::JumpingRace), "_arsdk-0906");
     }
 }
