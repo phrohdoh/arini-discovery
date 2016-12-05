@@ -8,7 +8,7 @@ MIT
 
 ## Usage
 
-```rust,ignore
+```rust,no_run
 extern crate arini_discovery;
 extern crate mdns;
 
@@ -23,6 +23,23 @@ fn main() {
     mdns::discover(discover_service_name, search_duration, |response| {
         println!("{:?}", response);
     }).expect(&format!("Failed to discover {}", discover_service_name));
+}
+```
+
+## Planned Usage
+
+```rust,ignore
+extern crate arini_discovery;
+use arini_discovery::ServiceType;
+use std::time::Duration;
+
+fn main() {
+    let search_duration = Some(Duration::from_secs(5));
+    let discoveries = arini_discovery::discover(ServiceType::Bebop2, search_duration);
+
+    for discovery in discoveries {
+        println!("{:#?}", discovery);
+    }
 }
 ```
 
