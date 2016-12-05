@@ -43,6 +43,13 @@ fn main() {
 }
 ```
 
+## Supporting this project
+
+If you would like to financially support this project please do the following:
+* [Become a patron](https://www.patreon.com/Phrohdoh)
+* [Tip me on gratipay](https://gratipay.com/~Phrohdoh/)
+* [E-mail me](mailto:taryn@phrohdoh.com) for one-time donation information
+
 ## Other
 
 This library is _not currently functional_ but, hopefully with the help of
