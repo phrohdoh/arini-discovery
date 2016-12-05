@@ -2,6 +2,13 @@
 name = "arini-discovery"
 version = "0.1.0"
 authors = ["Taryn Hill <taryn@phrohdoh.com>"]
+build = "build.rs"
 
 [dependencies]
 mdns = "0.1.4"
+
+[build-dependencies]
+skeptic = "0.5"
+
+[dev-dependencies]
+skeptic = "0.5"
