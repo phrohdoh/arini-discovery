@@ -6,6 +6,10 @@
 
 MIT
 
+## Status
+
+Development of this project is on hold but you are more than welcome to contribute!
+
 ## Usage
 
 ```rust,no_run
